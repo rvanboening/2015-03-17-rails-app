@@ -1,6 +1,14 @@
 RailsApp::Application.routes.draw do
   
-  get "users" => 'users#all'
+  get "users/index" => 'users#index'
+
+  get "users/show" => 'user#show'
+
+  get "users/new" => 'users#new'
+
+  get "users/edit" => 'users#edit'
+
+  
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

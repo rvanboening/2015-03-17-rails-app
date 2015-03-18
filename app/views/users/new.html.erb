@@ -1,16 +1,18 @@
+<div>
 <h1>New User</h1>
 
-<p>
-  <%= form_for @user do |f| %>
-    <%= f.label :user, 'User Name' %>:<br>
-    <%= f.text_field 'user' %><br><br>
-    <%= f.label :age, 'Age' %>:<br>
-    <%= f.text_field 'age' %><br><br>
-    <%= f.label :email, 'Email' %>:<br>
-    <%= f.text_field 'email' %><br><br>
-    <%= f.submit "Create" %>
-  <% end %>
-</p>
-
-
-<%= link_to 'Back', :action => nil %>
+    <form action="/users/create" method="post">
+    
+        <label for="name">User Name:</lable>
+        <input type="text" name="user" />
+        <br>
+        <label for="age">Age:</label> 
+        <input type="integer" name="age"/>
+        <br>
+        <label for="email">email:</label> 
+        <input type="text" name="email"/>
+        <br>
+        <input class="button" type="Submit" value="Log In" /> 
+        <br>
+    </form>
+</div>

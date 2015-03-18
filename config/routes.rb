@@ -7,8 +7,21 @@ RailsApp::Application.routes.draw do
   get "/users/show" => 'user#show'
 
   get "/users/new" => 'users#new'
+  
+  post "/users/create" => 'users#create'
+   
+    # post = HTTP Verb (e.g. "get", "post")
+    # "users/create" = Path of the request (i.e. the stuff in the URL bar, or the action of the form, or where the link takes us, etc.)
+    # => = The path corresponds to...
+    # users#create'
+      # users = controller
+      # "#" (separates controller from what follows)
+      # create = name of the method in the controller to run
 
   get "/users/edit" => 'users#edit'
+  
+  post "/users/update" => 'users#update'
+
 
   
   # The priority is based upon order of creation:

@@ -5,12 +5,13 @@ class UsersController < ApplicationController
   end
 
   def show
-    @user=User.find(params[:user])
+    @user=User.find(params[:id])
   end
 
   def new
     @user=User.new
   end
+                    
 
   def edit
     @user=User.find(params[:id])
@@ -18,5 +19,5 @@ class UsersController < ApplicationController
   
   def update
     @user=User.update
-
+  end
 end

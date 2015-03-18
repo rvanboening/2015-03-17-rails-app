@@ -26,6 +26,9 @@ class UsersController < ApplicationController
   end
   
   def update
-    @user=User.update
+    @user = User.find_by(id: params[:id])  
+    binding.pry
+    user.update({user: params[:user], age: params[:age], email: params[:email]})
+    redirect_to "/user/index"
   end
 end

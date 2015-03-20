@@ -18,7 +18,7 @@ RailsApp::Application.routes.draw do
 
   get "/users/:id/edit" => 'users#edit'
   
-  post "/users" => 'users#update'
+  post "/users/:id" => 'users#update'
   
   get "/users/:id" => 'users#show'
 

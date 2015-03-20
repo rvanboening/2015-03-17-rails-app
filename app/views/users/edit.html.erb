@@ -19,10 +19,16 @@
         <br>
     </form> -->
     
-    <%= form_for :user do |f| %>
-      <%= f.text_field("user") %>
-      <%= f.test_field("age") %>
-      <%= f.text_field("email") %>
-      <%=f.submit%>
+    <%= form_for :users, url: {:action => 'update'} do |f| %>
+      <%= f.label "name" %>
+      <%= f.text_field("user") %><br>
+  
+      <%= f.label "age" %>
+      <%= f.text_field("age") %><br>
+  
+      <%= f.label "email" %>
+      <%= f.text_field("email") %><br>
+      <%=f.submit 'Save'%>
     <% end %>
+    
 <div>

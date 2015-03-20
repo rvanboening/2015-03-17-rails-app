@@ -1,14 +1,13 @@
-<h3> Users List </h3>
-
-<div>
-    <%@users.each do |user|%>
-    <h2><%=user.user%></h2>
-    <p>Age: <%=user.age%></p>
-    <%=link_to 'Edit', :action => 'edit', :id => user.id%>
-    <br>
-    <p> <%= link_to "Delete", "/users/#{user.id}", method: :delete%></p> 
-    <p><%= link_to "See Details", :action => 'show', :id => user.id%></p>
-
+<h3> Attendees </h3>
+<%= link_to 'Invite Someone New', :action => 'new' %>
 <hr>
-<%end%>
-
+<div>
+        <%@users.each do |user|%>
+    <h3><%=user.user%></h3>
+    <p>Age: <%=user.age%></p>
+    <p><%=link_to 'Edit', :action => 'edit', :id => user.id%>, 
+        <%= link_to "Delete", "/users/#{user.id}", method: :delete%>, 
+        <%= link_to "See Details", :action => 'show', :id => user.id%></p>
+<hr>
+        <%end%>
+</div>

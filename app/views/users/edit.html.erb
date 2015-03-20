@@ -1,23 +1,6 @@
 <div>
-<h1>Users#edit</h1>
-<p>Find me in app/views/users/edit.html.erb</p>
+<h3>Edit <%=@user.user%>'s information.</h3>
 
-    <!-- <form action="/users" method="post">
-
-        <input type="hidden" name="id" value="<%=@user.id%>">
-
-        <label for="name">User Name:</lable>
-        <input type="text" name="user" />
-        <br>
-        <label for="age">Age:</label>
-        <input type="integer" name="age"/>
-        <br>
-        <label for="email">email:</label>
-        <input type="text" name="email"/>
-        <br>
-        <input class="button" type="Submit" value="Log In" />
-        <br>
-    </form> -->
     
     <%= form_for :users, url: {:action => 'update'} do |f| %>
       <%= f.label "name" %>

@@ -1,18 +1,18 @@
 <div>
 <h1>New User</h1>
 
-    <form action="/users/create" method="post">
+    <%= form_for :users, url: {:action => 'create'} do |f| %>
+
+      <%= f.label "name" %>
+      <%= f.text_field("user") %><br>
+  
+      <%= f.label "age" %>
+      <%= f.text_field("age") %><br>
+  
+      <%= f.label "email" %>
+      <%= f.text_field("email") %><br>
+  
+      <%= f.submit %>
+    <% end %>
     
-        <label for="name">User Name:</lable>
-        <input type="text" name="user" />
-        <br>
-        <label for="age">Age:</label> 
-        <input type="integer" name="age"/>
-        <br>
-        <label for="email">email:</label> 
-        <input type="text" name="email"/>
-        <br>
-        <input class="button" type="Submit" value="Log In" /> 
-        <br>
-    </form>
 </div>

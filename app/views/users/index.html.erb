@@ -1,13 +1,14 @@
 <h3> Attendees </h3>
 <%= link_to 'Invite Someone New', :action => 'new' %>
 <hr>
+
 <div>
         <%@users.each do |user|%>
     <h3><%=user.user%></h3>
     <p>Age: <%=user.age%></p>
     <p><%=link_to 'Edit', :action => 'edit', :id => user.id%>, 
         <%= link_to "Delete", "/users/#{user.id}", method: :delete%>, 
-        <%= link_to "See Details", :action => 'show', :id => user.id%></p>
+        <%= link_to("See Details", :action => 'show', :id => user.id, data: { confirm: "Are you sure?"})%></p>
 <hr>
         <%end%>
 </div>

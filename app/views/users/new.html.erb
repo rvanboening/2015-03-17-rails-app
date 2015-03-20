@@ -1,6 +1,9 @@
 <div>
-<h1>New User</h1>
-
+    
+    <% @user.errors.full_messages.each do |msg| %>
+      <p><%= msg %></p>
+    <% end %>
+    
     <%= form_for :users, url: {:action => 'create'} do |f| %>
 
       <%= f.label "name" %>

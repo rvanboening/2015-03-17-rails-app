@@ -4,10 +4,11 @@
     <%@users.each do |user|%>
     <h2><%=user.user%></h2>
     <p>Age: <%=user.age%></p>
-    <p>Email: <%=user.email%></p>
     <%=link_to 'Edit', :action => 'edit', :id => user.id%>
+    <br>
+    <p> <%= link_to "Delete", "/users/#{user.id}", method: :delete%></p> 
+    <p><%= link_to "See Details", :action => 'show', :id => user.id%></p>
 
 <hr>
 <%end%>
-<%= link_to 'New User', :action => 'new' %>
-</div>
+

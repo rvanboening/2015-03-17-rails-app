@@ -30,4 +30,9 @@ class UsersController < ApplicationController
            redirect_to "/users"
          end
     end
+    
+    def destroy
+      User.delete_all("id = '#{params[:id]}'")
+      redirect_to "/users"
+    end
 end

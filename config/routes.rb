@@ -21,6 +21,8 @@ RailsApp::Application.routes.draw do
   post "/users/:id" => 'users#update'
   
   get "/users/:id" => 'users#show'
+  
+  delete "/users/:id" => 'users#destroy'
 
   
   # The priority is based upon order of creation:

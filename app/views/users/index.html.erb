@@ -1,7 +1,8 @@
-<h3> Attendees </h3>
+<div>
+    <h3> Attendees </h3>
 <%= link_to 'Invite Someone New', :action => 'new' %>
 <hr>
-
+</div>
 <div>
         <%@users.each do |user|%>
     <h3><%=user.user%></h3>

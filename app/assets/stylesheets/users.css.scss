@@ -17,18 +17,16 @@ input {
 }
 
 body {
-    height: inherit;
-    background-color: pink;
-    margin: inherit;
+  background-image: image-url('beige-paper-texture.jpeg');
+  background-repeat: no-repeat;
+  background-size: 100%;
+  height: inherit;
+  margin: inherit;
 }
 
 .header {
-  height:50px;
-  background-color: white;
-  width: 100%;
-  position: fixed;
-  margin:0px auto;
-  
+  height: 10%;
+  background-color: pink;
 }
 
 .header-cont {
@@ -41,17 +39,37 @@ body {
 .title {
   margin: auto;
   padding: 10px 10%;
+  padding: 10px;
+  border-radius: 2px; 
 }
 
+
+label, p {
+  font-family: sans-serif;
+}
+
+label{
+  background-color:purple;
+  padding: 8px;
+  border-radius: 2px; 
+}
 input {
-  width: 200px;
+  width: 80%;
+  max-width: 200px;
   height: 25px;
   font-size: 13px; 
   display: inline-block;
-  align-content: inherit;  
+  align-content: inherit;
+  border-radius: 2px; 
+  margin: 10px 3% 1em;
+ 
 }
 
+
 form {
+  background-color: pink;
+  margin-top: 25px;
+  display: inline-block;
   max-width: 800px;
   padding: 10px;  
   background: -webkit-gradient(linear, bottom, left 175px, from(#CCCCCC), to(#EEEEEE));
@@ -60,12 +78,7 @@ form {
   position:relative;
   width:80%;
   height:300px;
-  font-family: Tahoma, Geneva, sans-serif;
-  font-size: 14px;
-  font-style: italic;
   line-height: 24px;
-  font-weight: bold;
-  color: #09C;
   -webkit-border-radius: 10px;
   -moz-border-radius: 10px;
   border-radius: 10px;
@@ -75,4 +88,8 @@ form {
   -webkit-box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3);
   -moz-box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3);
   box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3);
+}
+
+.pink {
+  background-color:pink;
 }

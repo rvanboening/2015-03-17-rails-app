@@ -7,14 +7,14 @@
     <%= form_for :users, url: {:action => 'create'} do |f| %>
 
       <%= f.label "name" %>
-      <%= f.text_field("user") %>
-  
+         <%= f.text_field("user") %>
+  <br>
       <%= f.label "age" %>
       <%= f.text_field("age") %>
-  
+  <br>
       <%= f.label "email" %>
       <%= f.text_field("email") %>
-  
+  <br>
       <%= f.submit %>
     <% end %>
     

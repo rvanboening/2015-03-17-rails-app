@@ -5,17 +5,22 @@
   <%= stylesheet_link_tag    "application", :media => "all" %>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
+  
+  <link rel="stylesheet" href="../../assets/stylesheets/foundation-5.5.1.custom/css/foundation.css" type="text/css" media="screen" title="no title" charset="utf-8">
+    
 </head>
 <body>
-    <div="header-cont">    
-        <div class="header">
+    <div class="row">
+        <div class="header small-12 medium-12 large-12 columns">
+          <h1>Princess Party</h1>  
+        </div><!--end of header class -->   
+    </div> <!--end of header row-->
+    
 
-            <h1 class="title">Princess party</h1>
-        </div>
-    </div="header-cont">
-<div class="body-cont">
-    <%= yield %>
-</div class="body-cont">
+    <div class="row body-cont">
+        <div class="small-12 medium-12 large-12"></div>
+        <%= yield %>
+    </div class="body-cont"><!--end of row -->
 
-</body>
+</body> <!-- End of Body div -->
 </html>

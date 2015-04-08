@@ -1,28 +1,50 @@
 RailsApp::Application.routes.draw do
-  
-  root :to => "users#index"
-  
-  get "/users" => 'users#index'
 
-  get "/users/new" => 'users#new'
-  
-  post "/users" => 'users#create'
-  
-    # post = HTTP Verb (e.g. "get", "post")
-    # "users/create" = Path of the request (i.e. the stuff in the URL bar, or the action of the form, or where the link takes us, etc.)
-    # => = The path corresponds to...
-    # users#create'
-      # users = controller
-      # "#" (separates controller from what follows)
-      # create = name of the method in the controller to run
+resources :users
+resources :events
 
-  get "/users/:id/edit" => 'users#edit'
-  
-  post "/users/:id" => 'users#update'
-  
-  get "/users/:id" => 'users#show'
-  
-  delete "/users/:id" => 'users#destroy'
+# Rake Routes 
+#  users GET    /users(.:format)           users#index
+#            POST   /users(.:format)           users#create
+#   new_user GET    /users/new(.:format)       users#new
+#  edit_user GET    /users/:id/edit(.:format)  users#edit
+#       user GET    /users/:id(.:format)       users#show
+#            PUT    /users/:id(.:format)       users#update
+#            DELETE /users/:id(.:format)       users#destroy
+#     events GET    /events(.:format)          events#index
+#            POST   /events(.:format)          events#create
+#  new_event GET    /events/new(.:format)      events#new
+# edit_event GET    /events/:id/edit(.:format) events#edit
+#      event GET    /events/:id(.:format)      events#show
+#            PUT    /events/:id(.:format)      events#update
+#            DELETE /events/:id(.:format)      events#destroy
+
+    #
+  # root :to => "users#index"
+  #
+  # get "/users" => 'users#index'
+  #
+  # get "/users/new" => 'users#new'
+  #
+  # post "/users" => 'users#create'
+  #
+  #   # post = HTTP Verb (e.g. "get", "post")
+  #   # "users/create" = Path of the request (i.e. the stuff in the URL bar, or the action of the form, or where the link takes us, etc.)
+  #   # => = The path corresponds to...
+  #   # users#create'
+  #     # users = controller
+  #     # "#" (separates controller from what follows)
+  #     # create = name of the method in the controller to run
+  #
+  # get "/users/:id/edit" => 'users#edit'
+  #
+  # post "/users/:id" => 'users#update'
+  #
+  # get "/users/:id" => 'users#show'
+  #
+  # delete "/users/:id" => 'users#destroy'
+
+
 
   
   # The priority is based upon order of creation:

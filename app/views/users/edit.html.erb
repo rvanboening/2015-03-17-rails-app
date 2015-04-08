@@ -5,7 +5,8 @@
       <p><%= msg %></p>
     <% end %>   
     
-    <%= form_for(:users, :url => {:action => 'update'}) do |f| %>
+                    
+    <%= form_for(:users, method: :put, :url => {:action => 'update'}) do |f| %>
     <h3>Edit <%=@user.user%>'s information.</h3>
         
       <%= f.label "name" %>
@@ -21,3 +22,4 @@
     <% end %>
     
 <div>
+    

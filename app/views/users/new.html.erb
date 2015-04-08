@@ -1,21 +1,21 @@
-<div>
+<div class="row">
     
     <% @user.errors.full_messages.each do |msg| %>
       <p><%= msg %></p>
     <% end %>
     
     <%= form_for :users, url: {:action => 'create'} do |f| %>
-
-      <%= f.label "name" %>
-         <%= f.text_field("user") %>
-  <br>
-      <%= f.label "age" %>
-      <%= f.text_field("age") %>
-  <br>
-      <%= f.label "email" %>
-      <%= f.text_field("email") %>
-  <br>
-      <%= f.submit %>
-    <% end %>
-    
-</div>
+    <div class= "small-6 small-centered columns">
+          <h3><%= f.label "name" %>
+             <%= f.text_field("user") %></h3>
+      <br>
+          <h3><%= f.label "age" %>
+          <%= f.text_field("age") %></h3>
+      <br>
+          <h3><%= f.label "email" %>
+          <%= f.text_field("email") %></h3>
+      <br>
+          <%= f.submit %>
+        <% end %>
+    </div><!--end of column for forms -->
+</div><!--end of row -->

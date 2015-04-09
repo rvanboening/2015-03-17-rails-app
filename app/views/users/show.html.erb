@@ -1,7 +1,12 @@
-<div>
-<h3><%=@user.user%> will be attending the party.</h3>
-    <p>Age: <%=@user.age%></p>
-    <p>Email: <%=@user.email%></p>
+<div class="row">
+   <div class="small-6 small-centered columns">
+        <h3><%=@user.user%> will be attending the party.</h3>
+    </div><!--end of header div -->
     
-<%=link_to("Back to Princess Party", "/users")%>
+    <div class="small-6 small-centered columns">
+        <p>Age: <%=@user.age%></p>
+        <p>Email: <%=@user.email%></p>
+    
+        <%=link_to("Back to Princess Party", "/users")%>
+    </div><!--end of show div -->
 </div>
